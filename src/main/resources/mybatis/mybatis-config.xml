@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--配置实体类 类型的别名-->
+    <typeAliases>
+        <package name="com.team.house.housebackapi.pojo"></package>
+    </typeAliases>
+
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <property name="reasonable" value="true"/>
+        </plugin>
+    </plugins>
+
+    <!-- 加载sql映射文件 -->
+    <mappers>
+        <!--加载指定包下的所有sql映射文件-->
+        <package name="com.team.house.housebackapi.mapper"></package>
+    </mappers>
+</configuration>
